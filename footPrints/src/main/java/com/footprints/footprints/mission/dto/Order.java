@@ -18,24 +18,15 @@ public class Order {
     }
 
     public boolean hasNotCustomerInfo() {
-        if (customerInfo == null) {
-            return true;
-        }
-        return false;
+        return customerInfo == null;
     }
 
     public boolean hasNotItems() {
-        if (items.getItems().isEmpty() || items.getItems().size() == 0) {
-            return true;
-        }
-        return false;
+        return items.getItems().isEmpty() || items.getItems().size() == 0;
     }
 
     public boolean hasNotTotalPrice() {
-        if (totalPrice <= 0) {
-            return true;
-        }
-        return false;
+        return totalPrice <= 0;
     }
 
     public Long getId() {
