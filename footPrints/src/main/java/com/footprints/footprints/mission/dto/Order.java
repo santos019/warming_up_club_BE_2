@@ -6,6 +6,17 @@ public class Order {
     private Long totalPrice;
     private CustomerInfo customerInfo;
 
+    private Order(final Long id, final Items items, final Long totalPrice, final CustomerInfo customerInfo) {
+        this.id = id;
+        this.items = items;
+        this.totalPrice = totalPrice;
+        this.customerInfo = customerInfo;
+    }
+
+    public static Order of(final Long id, final Items items, final Long totalPrice, final CustomerInfo customerInfo) {
+        return new Order(id, items, totalPrice, customerInfo);
+    }
+
     public boolean hasNotCustomerInfo() {
         if (customerInfo == null) {
             return true;
