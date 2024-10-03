@@ -22,7 +22,7 @@ public class Order {
     }
 
     public boolean hasNotItems() {
-        return items.getItems().isEmpty() || items.getItems().size() == 0;
+        return items == null || items.getItems() == null || items.getItems().isEmpty();
     }
 
     public boolean hasNotTotalPrice() {
